@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PrimeiraAPI.Models;
-using PrimeiraAPI.ViewModel;
+using PrimeiraAPI.Application.ViewModel;
+using PrimeiraAPI.Domain.Models;
 
 namespace PrimeiraAPI.Controllers
 {
@@ -49,13 +49,13 @@ namespace PrimeiraAPI.Controllers
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {
-            _logger.Log(LogLevel.Error, "Teve um erro");
+            //_logger.Log(LogLevel.Error, "Teve um erro");
 
-            throw new Exception("Erro de Teste");
+            //throw new Exception("Erro de Teste");
 
             var employees = _employeeRepository.Get(pageNumber, pageQuantity);
 
-            _logger.LogInformation("Teste");
+            //_logger.LogInformation("Teste");
             return Ok(employees);
         }
     }

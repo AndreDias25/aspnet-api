@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using PrimeiraAPI;
-using PrimeiraAPI.Infraestrutura;
-using PrimeiraAPI.Models;
+using PrimeiraAPI.Domain.Models;
+using PrimeiraAPI.Infraestrutura.Repositories;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
-using PrimeiraAPI.Models;
+using PrimeiraAPI.Domain.Models;
 
 namespace PrimeiraAPI.Infraestrutura
 {
