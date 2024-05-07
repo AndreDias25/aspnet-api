@@ -3,12 +3,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PrimeiraAPI.Application.ViewModel;
 using PrimeiraAPI.Domain.DTOs;
-using PrimeiraAPI.Domain.Models;
+using PrimeiraAPI.Domain.Models.EmployeeAggregate;
 
-namespace PrimeiraAPI.Controllers
+namespace PrimeiraAPI.Controllers.v2
 {
     [ApiController]
-    [Route("api/v1/employee")]
+    [Route("api/v{version:apiVersion}/employee")]
+    [ApiVersion("2.0")]
     public class EmployeeController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -49,7 +50,7 @@ namespace PrimeiraAPI.Controllers
             return File(dataBytes, "image/png");
         }
 
-      
+
         [HttpGet]
         public IActionResult Get(int pageNumber, int pageQuantity)
         {

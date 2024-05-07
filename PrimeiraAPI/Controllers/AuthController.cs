@@ -14,7 +14,7 @@ namespace PrimeiraAPI.Controllers
             if(username == "andre" && password == "123456")
             {
                 var newPassword = int.Parse(password);
-                var token = TokenService.GenerateToken(new Domain.Models.Employee(username, newPassword, null));
+                var token = TokenService.GenerateToken(new Domain.Models.EmployeeAggregate.Employee(username, newPassword, null));
                 return Ok(token);
             }
 

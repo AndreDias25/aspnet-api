@@ -1,12 +1,14 @@
 ﻿using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.EntityFrameworkCore;
-using PrimeiraAPI.Domain.Models;
+using PrimeiraAPI.Domain.Models.CompanyAggregate;
+using PrimeiraAPI.Domain.Models.EmployeeAggregate;
 
 namespace PrimeiraAPI.Infraestrutura
 {
     public class ConnectionContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Company> Company { get; set; }
 
         private IConfiguration _configuration;
 
